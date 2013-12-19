@@ -35,6 +35,7 @@ public class CreateIndexByLabel {
 				node.setProperty("userid", i);
 				
 				tx.success();
+				System.out.println("Create node:" + i);
 			} catch (Exception e) {
 				e.printStackTrace();
 				System.out.println("Failed to create label index");

@@ -72,16 +72,14 @@ public class CreateIndex {
 		// search
 		IndexHits<Node> hit = users.get("userid", 2);
 		ResourceIterator<Node> nodes = hit.iterator();
-		while (nodes.hasNext()) {
+		if (nodes.hasNext()) {
 			Node node = nodes.next();
 			System.out.println("result: " + node);
 			System.out.println("userid: " + node.getProperty("userid"));
 			System.out.println("username: " + node.getProperty("username"));
+		} else {
+			System.out.println("No found");
 		}
-//		Node result = hit.getSingle();
-//		System.out.println("result: " + result);
-//		System.out.println("userid: " + result.getProperty("userid"));
-//		System.out.println("username: " + result.getProperty("username"));
 	}
 	
 	private static void registerShutdownHook(final GraphDatabaseService graphDb) {

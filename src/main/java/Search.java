@@ -55,15 +55,15 @@ public class Search {
 			}
 			
 			
-//			IndexHits<Node> hit = users.get("userid", "2");
-//			Node result = hit.getSingle();
-//			if (result == null) {
-//				System.out.println("No Found!");
-//			} else {
-//				System.out.println("result: " + result);
-//				System.out.println("userid: " + result.getProperty("userid"));
-//				System.out.println("username: " + result.getProperty("username"));
-//			}
+			IndexHits<Node> hit = users.get("userid", "2");
+			Node result = hit.getSingle();
+			if (result == null) {
+				System.out.println("No Found!");
+			} else {
+				System.out.println("result: " + result);
+				System.out.println("userid: " + result.getProperty("userid"));
+				System.out.println("username: " + result.getProperty("username"));
+			}
 			
 			tx.success();
 			tx.finish();
@@ -73,23 +73,23 @@ public class Search {
 					.println("Failed to start transaction for creating index");
 		}
 		
-//		IndexHits<Node> hit = users.get("userid", userid);
-//		Node result = hit.getSingle();
-//		System.out.println("result: " + result);
-//		System.out.println("userid: " + result.getProperty("userid"));
-//		System.out.println("username: " + result.getProperty("username"));
+		IndexHits<Node> hit = users.get("userid", userid);
+		Node result = hit.getSingle();
+		System.out.println("result: " + result);
+		System.out.println("userid: " + result.getProperty("userid"));
+		System.out.println("username: " + result.getProperty("username"));
 		
-//		try {
-//			IndexHits<Node> hit = users.get("userid", userid);
-//			Node result = hit.getSingle();
-//			System.out.println("result: " + result);
-//			System.out.println("userid: " + result.getProperty("userid"));
-//			System.out.println("username: " + result.getProperty("username"));
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out
-//					.println("Failed to start transaction for creating index");
-//		}
+		try {
+			hit = users.get("userid", userid);
+			result = hit.getSingle();
+			System.out.println("result: " + result);
+			System.out.println("userid: " + result.getProperty("userid"));
+			System.out.println("username: " + result.getProperty("username"));
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out
+					.println("Failed to start transaction for creating index");
+		}
 	}
 	
 	private static void registerShutdownHook(final GraphDatabaseService graphDb) {

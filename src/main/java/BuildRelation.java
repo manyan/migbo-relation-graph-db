@@ -19,7 +19,7 @@ import org.neo4j.graphdb.schema.IndexDefinition;
  * below code depends on neo4j 2.0. but its not compatible with our data store, so just comment them first, will fix it later
  * */
 public class BuildRelation {
-	public static final String DB_PATH = "/var/lib/neo4j/data/migbo.db";
+	public static final String DB_PATH = "/var/lib/neo4j/data/test.db";
 	public static final String LABEL_NAME = "user";
 	public static final String LABEL_INDEX_NAME = "userid";
 	public static final String INDEX_FOR_USER = "user";
