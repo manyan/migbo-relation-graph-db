@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Vendor: The Neo4j Graph Database Project
+Implementation-Title: Neo4j - Graph Database Kernel
+Implementation-Version: 2.0.0-M06
+Implementation-Vendor-Id: org.neo4j
+Built-By: jenkins
+Build-Jdk: 1.7.0_25
+Created-By: Apache Maven 3.0.4
+Url: http://neo4j.org/
+Archiver-Version: Plexus Archiver
+
